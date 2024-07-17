@@ -30,7 +30,7 @@ function addGamesToPage(games) {
 
     // loop over each item in the data
     for (let i=0; i < games.length ; i++) {
-    
+        
         // create a new div element, which will become the game card
         const gamesCard = document.createElement("div");
 
@@ -50,8 +50,9 @@ function addGamesToPage(games) {
 
 }
 
-addGamesToPage(GAMES_JSON)
+
 // call the function we just defined using the correct variable
+
 // later, we'll call this function using a different list of games
 
 
@@ -134,6 +135,8 @@ unfundedBtn.addEventListener("click", filterUnfundedOnly)
 fundedBtn.addEventListener("click", filterFundedOnly)
 allBtn.addEventListener("click", showAllGames)
 
+// display funded games upon initial page load
+addGamesToPage(filterFundedOnly(GAMES_JSON))
 /*************************************************************************************
  * Challenge 6: Add more information at the top of the page about the company.
  * Skills used: template literals, ternary operator
