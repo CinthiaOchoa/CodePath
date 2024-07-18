@@ -53,7 +53,8 @@ function addGamesToPage(games) {
 
 // Ensure this is called after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
-    addGamesToPage(GAMES_JSON);
+    const fundedGames = GAMES_JSON.filter(game => game.pledged >= game.goal);
+    addGamesToPage(fundedGames);
 });
 
 
@@ -157,22 +158,7 @@ function showAllGames() {
 
 
 
-// select each button in the "Our Games" section
-// const unfundedBtn = document.getElementById("unfunded-btn");
-// unfundedBtn.addEventListener('click', filterUnfundedOnly);
-// const fundedBtn = document.getElementById("funded-btn");
 
-// fundedBtn.addEventListener('click', filterFundedOnly);
-// const allBtn = document.getElementById("all-btn");
-
-// // add event listeners with the correct functions to each button
-
-// allBtn.addEventListener('click', showAllGames);
-
-// /*************************************************************************************
-//  * Challenge 6: Add more information at the top of the page about the company.
-//  * Skills used: template literals, ternary operator
-// */
 
 // grab the description container
 const descriptionContainer = document.getElementById("description-container");
