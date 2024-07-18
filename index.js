@@ -185,3 +185,4 @@ firstGameContainer.appendChild(firstGame)
 const secondGame = document.createElement("p")
 secondGame.innerHTML = second.name;
 secondGameContainer.appendChild(secondGame)
+
