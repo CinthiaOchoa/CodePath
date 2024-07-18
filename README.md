@@ -32,7 +32,7 @@ GIF created with screen to gif
 ## Notes
 
 Describe any challenges encountered while building the app.
-Learning git and puhsing the project to the repository was a challenge.
+* Learning git and puhsing the project to the repository was a challenge.
 
 ## License
 
