@@ -21,8 +21,14 @@ body {
 
 .stats-container {
     display: flex;
+    color: dodgerblue;
+    align-items: center;
 }
 
+.stats-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
+}
 .stats-card {
     background-color: #a8b0bc;
     border-radius: 7px;
@@ -38,7 +44,7 @@ body {
 
 #games-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-around;
 }
 
@@ -73,3 +79,51 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+.navbar ul {
+    list-style: none;
+    overflow: hidden;
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    margin-bottom: 0;
+    z-index: 1000;
+}
+.navbar ul li {
+    float: left;
+    margin: 15px;
+    /*margin-left: 20px;*/
+}
+
+
+/* Style rule set for individual li link */
+.navbar ul li a {
+    font-family: Arial;
+    color:blue;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    padding: 2px;
+}
+
+/* Style rule set for hovered link */
+.navbar ul li a:hover {
+    font-weight: bold;
+}
+/* .revealable.active{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .revealable{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+  js-scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  .js-scroll.scrolled {
+    opacity: 1;
+  } */
