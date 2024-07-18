@@ -24,7 +24,7 @@ Navigation bar
 
 Here's a walkthrough of implemented features:
 
-<img src='Codepath Prework Web 102.gif' title='Video Walkthrough'>
+<img src='' title='Video Walkthrough'>
 
 
 <!-- Replace this with whatever GIF tool you used! -->
