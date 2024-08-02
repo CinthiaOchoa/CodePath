@@ -1,10 +1,10 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - *Sea Monster Crowdfunding*
 
-Submitted by: **Your Name Here**
+Submitted by: **Abdulaziz Khader**
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**Sea Monster Crowdfunding** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: **7** hours spent in total
 
 ## Required Features
 
@@ -18,6 +18,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [ ] List anything else that you can get done to improve the app functionality!
+- We can add a search bar to search for a certain game, and we could add tags for the games to filter the games by genre.
 
 ## Video Walkthrough
 
@@ -34,7 +35,17 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Describe any challenges encountered while building the app. 
+The questions asked for the first key were a bit confusing; getting files from a remote repo and putting it into the local repo is called pulling, but the answer was committing. Was the question asking what is the process of adding files to the remote repo stream, as in the stream that will later be pushed to the remote repo?
+The Keys:
+1. seaworthy
+2. OOZEdiveTRAPpine
+3. 6games-container.stats-card15
+4. 11seafoamGAMES_JSON
+5. 19187800268BRAIN
+6. 74FLANNELclick
+7. toLocaleString<div>1ivy
+8. ZooHowCEDAR
 
 ## License
 
