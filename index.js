@@ -30,7 +30,7 @@ function addGamesToPage(games) {
 
     // loop over each item in the data
     for (let i = 0; i < games.length; i++) {
-        const games = games[i];
+        const game = games[i];
         
         // create a new div element, which will become the game card
         const gameCard = document.createElement('div');
@@ -50,6 +50,7 @@ function addGamesToPage(games) {
         
         // append the game to the games-container
         gameContainer.appendChild(gameCard);
+    }
 }
 
 // call the function we just defined using the correct variable
