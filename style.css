@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
 
 body {
-    font-family: 'Cabin';
+    font-family: "Cabin";
     background-color: #758190;
 }
 
@@ -32,7 +32,9 @@ body {
     text-align: center;
 }
 
-#num-contributions, #total-raised, #num-games {
+#num-contributions,
+#total-raised,
+#num-games {
     font-size: 50px;
 }
 
@@ -45,11 +47,11 @@ body {
 .game-img {
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 10px #FFFFFF;
+    box-shadow: 0 0 10px #ffffff;
 }
 
 .game-card {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 1%;
     margin: 1%;
     width: 300px;
@@ -67,7 +69,7 @@ body {
 }
 
 button {
-    font-family: 'Cabin';
+    font-family: "Cabin";
     border: none;
     padding: 1%;
     margin: 1%;
