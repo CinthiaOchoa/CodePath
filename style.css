@@ -21,6 +21,13 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center; /*2of7 - Step 3*/
+}
+
+/*2of7 - Step 3*/
+.stats-container:hover {
+    box-shadow: 0 0 30px lightblue;
+    cursor: pointer;
 }
 
 .stats-card {
