@@ -90,15 +90,15 @@ const games = ` [
   }
 ]
 `;
-const template = `
-{
-"name": "",
-"description": "",
-"pledged": 0,
-"goal": 0,
-"backers": 0,
-"img": ""
-},
-`;
+// const template = `
+// {
+// "name": "",
+// "description": "",
+// "pledged": 0,
+// "goal": 0,
+// "backers": 0,
+// "img": ""
+// },
+// `;
 
 export default games;
