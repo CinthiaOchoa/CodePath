@@ -99,19 +99,34 @@ unfundedBtn.addEventListener("click", filterUnfundedOnly);
 fundedBtn.addEventListener("click", filterFundedOnly);
 allBtn.addEventListener("click", showAllGames);
 
-/*************************************************************************************
- * Challenge 6: Add more information at the top of the page about the company.
- * Skills used: template literals, ternary operator
- */
-
 // grab the description container
 const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
+let numOfUnfunded = GAMES_JSON.reduce((acc, game) => {
+    return game["pledged"] < game["goal"] ? acc + 1 : acc;
+}, 0);
+console.log(numOfUnfunded);
 
 // create a string that explains the number of unfunded games using the ternary operator
+const oneGameUnfunded = `A total of $${totalRaised.toLocaleString()} has been raised for 
+${
+    GAMES_JSON.length
+} games. Currently, 1 game remains unfunded. We need your help to fund these 
+amazing games!`;
+
+const multipleGamesUnfunded = `A total of $${totalRaised.toLocaleString()} has been raised 
+for ${
+    GAMES_JSON.length
+} games. Currently, ${numOfUnfunded} games remain unfunded. We need 
+your help to fund these amazing games!`;
+
+const displayStr = numOfUnfunded == 1 ? oneGameUnfunded : multipleGamesUnfunded;
 
 // create a new DOM element containing the template string and append it to the description container
+let description = document.createElement("p");
+description.innerHTML = displayStr;
+descriptionContainer.appendChild(description);
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
