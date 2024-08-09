@@ -33,7 +33,7 @@ function addGamesToPage(games) {
 
         div.innerHTML = `
             <img class="game-img" src="${games[game]["img"]}" /">
-            <h>${games[game]["name"]}</h>
+            <h3>${games[game]["name"]}</h3>
             <p>${games[game]["description"]}</p>
             <p>BACKERS: ${games[game]["backers"]}</p>`;
 
