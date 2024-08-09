@@ -26,6 +26,8 @@ function addGamesToPage(games) {
             <p>${games[game]["description"]}</p>
             <p>BACKERS: ${games[game]["backers"]}</p>`;
 
+        addProgressBar(div, games[game]); // ADDED FEATURE
+
         gamesContainer.appendChild(div);
     }
 }
@@ -66,6 +68,8 @@ function filterUnfundedOnly() {
 
     // use the function we previously created to add the unfunded games to the DOM
     addGamesToPage(unfunded);
+
+    addEventListenersToCards(); // CUSTOM FEATURE
 }
 
 // show only games that are fully funded
@@ -79,6 +83,8 @@ function filterFundedOnly() {
 
     // use the function we previously created to add unfunded games to the DOM
     addGamesToPage(funded);
+
+    addEventListenersToCards(); // CUSTOM FEATURE
 }
 
 // show all games
@@ -87,7 +93,10 @@ function showAllGames() {
 
     // add all games from the JSON data to the DOM
     addGamesToPage(GAMES_JSON);
+
+    addEventListenersToCards(); // CUSTOM FEATURE
 }
+
 showAllGames(); // all games shown initially
 
 // select each button in the "Our Games" section
@@ -147,3 +156,39 @@ firstGameContainer.appendChild(topFundedName);
 let runnerUpName = document.createElement("p");
 runnerUpName.textContent = runnerUp.name;
 secondGameContainer.appendChild(runnerUpName);
+
+// CUSTOM FEATURE: INDIVIDUAL GAME PROGRESS BARS
+function addProgressBar(gameCardHTML, game) {
+    let progressBarCont = document.createElement("div");
+    progressBarCont.classList.add("progress-bar-container");
+
+    let progressBar = document.createElement("div");
+    progressBar.classList.add("progress-bar");
+    progressBarCont.innerHTML = `<p class="progress-text">RAISED $${game[
+        "pledged"
+    ].toLocaleString()}</p>`;
+
+    updateProgressBar(progressBar, game["pledged"], game["goal"]);
+
+    progressBarCont.appendChild(progressBar);
+    gameCardHTML.appendChild(progressBarCont);
+}
+
+function updateProgressBar(progressBar, pledged, goal) {
+    let percentage = (pledged / goal) * 100;
+    if (percentage > 100) {
+        percentage = 100; // Cap the percentage at 100%
+    }
+    progressBar.style.width = percentage + "%";
+}
+
+function addEventListenersToCards() {
+    document.querySelectorAll(".game-card").forEach((gameCard) => {
+        gameCard.addEventListener("mouseover", () => {
+            gameCard.classList.add("show-progress");
+        });
+        gameCard.addEventListener("mouseout", () => {
+            gameCard.classList.remove("show-progress");
+        });
+    });
+}
