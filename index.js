@@ -42,10 +42,10 @@ function addGamesToPage(games) {
         // about each game
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
-        gameCard.innerHTML = <img src="${game.image}" class="game-img" alt="{game.name}">
+        gameCard.innerHTML = `<img src="${game.image}" class="game-img" alt="{game.name}">
                              <h3>${game.name}</h3>
                              <p>${game.description}</p>
-                             <p>Backers: ${game.backers}</p>
+                             <p>Backers: ${game.backers}</p>`
         ;
         
         // append the game to the games-container
@@ -70,7 +70,7 @@ const contributionsCard = document.getElementById("num-contributions");
 const totalContributions = GAMES_JSON.reduce((total, game) => total + game.backers, 0);
 
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
-contributionsCards.innerHTML = `${totalContributions.toLocaleString()}`;
+contributionsCard.innerHTML = `${totalContributions.toLocaleString()}`;
 
 // grab the amount raised card, then use reduce() to find the total amount raised
 const raisedCard = document.getElementById("total-raised");
