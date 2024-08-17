@@ -32,11 +32,10 @@ GIF created with ...
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
 
-## Notes
-
-Describe any challenges encountered while building the app.
 ## Challenges
-The challenges I 
+One of the primary challenges I faced during the development of the Sea Monster Crowdfunding website was understanding and effectively utilizing game objects. Initially, I struggled with defining the different properties and methods associated with game objects and how they interacted within the application. This required me to do a deep dive into object-oriented programming concepts to ensure that each game's data was accurately represented and manipulated. Additionally, I encountered difficulties with JavaScript functions, particularly filter and reduce. These functions were crucial for managing and displaying dynamic game data, such as filtering games based on their funding status and aggregating financial statistics. Learning to use these functions correctly involved understanding their syntax and behavior in challenge 5, which was a significant learning curve.
+
+Another challenge was grasping how various pieces of code integrated to form the overall design of the website. This involved not only understanding the individual functionalities but also how they worked together to create a seamless user experience. I had to double check that the code for displaying game statistics, display the game list. This required a comprehensive understanding of both the front-end components of the application and how they interact. As well as balancing these elements while maintaining a clear and user-friendly design tested my problem-solving skills and patience but ultimately contributed to a deeper understanding of web development as a whole.
 
 ## License
 
