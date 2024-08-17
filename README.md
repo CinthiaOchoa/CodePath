@@ -23,14 +23,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+Walkthrough: https://i.imgur.com/NqGiPFg.mp4
 
 ## Challenges
 One of the primary challenges I faced during the development of the Sea Monster Crowdfunding website was understanding and effectively utilizing game objects. Initially, I struggled with defining the different properties and methods associated with game objects and how they interacted within the application. This required me to do a deep dive into object-oriented programming concepts to ensure that each game's data was accurately represented and manipulated. Additionally, I encountered difficulties with JavaScript functions, particularly filter and reduce. These functions were crucial for managing and displaying dynamic game data, such as filtering games based on their funding status and aggregating financial statistics. Learning to use these functions correctly involved understanding their syntax and behavior in challenge 5, which was a significant learning curve.
