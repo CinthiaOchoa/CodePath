@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: #223853;
 }
 
 #tentacles {
@@ -11,7 +11,7 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background-color: rgb(87, 168, 196);
     padding: 1%;
     align-items: center;
     margin-left: -10px;
@@ -19,12 +19,49 @@ body {
     margin-top: -10px;
 }
 
+.header-text, #tentacles{
+    margin-left: 280px;
+    background-color:#2b314d;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border-style:dashed;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255,255,255,0.2);
+    display:flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 10px 6px;
+    font-size: 20px;
+}
+
 .stats-container {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#first-game:hover{
+    box-shadow: 0 0 30px lightblue;
+}
+
+#second-game:hover{
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: #7988bb;
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
@@ -49,7 +86,7 @@ body {
 }
 
 .game-card {
-    background-color: #FFFFFF;
+    background-color:#2b314d;
     padding: 1%;
     margin: 1%;
     width: 300px;
@@ -72,4 +109,10 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    background-color:#2b314d;
+    color: lightblue
+}
+
+button:hover {
+    cursor: pointer;
 }

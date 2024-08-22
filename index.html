@@ -10,17 +10,21 @@
     <!-- header row with logo -->
     <div class="header">
         <img id="tentacles" src="assets/tentacles.png">
-        <h1 class="header-text">Sea Monster Crowdfunding</h1>
+        <h1 class="header-text">---🦈🐙Sea Monster Crowdfunding🐙🦈---</h1>
+        <img id="tentacles" src="assets/tentacles.png">
     </div>
 
     <!-- background info about company -->
     <h2>Welcome to Sea Monster!</h2>
-    <div id="description-container">
+    <div id="description-container" display="flex">
         <p>The purpose of our company is to fund independent games. We've been in operation for 12 years.</p>
     </div>
 
+    <!-- button to get to games faster-->
+    <button id="down-button" onClick="document.getElementById('bottom-section').scrollIntoView()">Go To Games</button>
+
     <!-- top games & other interesting stats -->
-    <h2>Stats</h2>
+    <h1 align-item="center">Stats</h1>
     <div class="stats-container">
         <div class="stats-card">
             <h3>Individual Contributions</h3>
@@ -48,8 +52,10 @@
     </div>
 
     <!-- list of games funded by Sea Monster -->
-    <h2>Our Games</h2>
-    <p>Check out each of our games below!</p>
+    <h1 id="bottom-section">Our Games</h1>
+    <h2>Check out each of our games below!</h2>
+        <input type="search" placeholder="Search Game" id="game-input"  class="search-bar">
+        </input>
     <div id="button-container">
         <button id="unfunded-btn">Show Unfunded Only</button>
         <button id="funded-btn">Show Funded Only</button>
