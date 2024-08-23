@@ -21,7 +21,7 @@ The following **required** functionality is completed:
 Here's a walkthrough of implemented features:
 
 
-<img src='![Screen Recording 2024-08-23 at 9 59 43 AM](https://github.com/user-attachments/assets/f35668ed-c091-47e0-9c7a-3b7550bd224f)' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/vd1r6Fr' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with ...  QuickTime Player
 
