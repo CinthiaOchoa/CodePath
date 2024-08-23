@@ -169,9 +169,8 @@ const numOfUnfundedGames = GAMES_JSON.reduce((accumilator, games) => {
     return accumilator + 0
 }, 0)
 
-
 // create a string that explains the number of unfunded games using the ternary operator
-const descriptionString = `<p>We raised $${totalRaised.toLocaleString("en-US")}, ${numOfUnfundedGames != 0 ? `we still need to fund ${numOfUnfundedGames}! Please help :(` : `all games are funded :D`}`
+const descriptionString = `<p>A total of $${totalRaised.toLocaleString("en-US")} has been raised for ${totalGames}. ${numOfUnfundedGames != 0 ? `Currently ${numOfUnfundedGames} games remain unfunded. We need your help funding these amazing games!` : `all games have been funded :D`}`
 
 // create a new DOM element containing the template string and append it to the description container
 const newDOMDescription= document.createElement("div")
