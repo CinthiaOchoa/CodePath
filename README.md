@@ -25,7 +25,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://i.imgur.com/HrzqTq5.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Desktop 2024 08 23 - 20 04 14 02](https://github.com/user-attachments/assets/9822cd3e-c643-4e0c-a4c2-84a826f8bc8e)
 
 GIF created with imgur.com
 
