@@ -21,7 +21,7 @@ The following **required** functionality is completed:
 Here's a walkthrough of implemented features:
 
 
-<img src='https://i.imgur.com/xJtf1yV.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://github.com/jcas96/web102_prework/blob/main/seamonsterTest.gif
 
 GIF created with ...  QuickTime Player
 
