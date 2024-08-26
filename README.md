@@ -21,7 +21,7 @@ The following **required** functionality is completed:
 Here's a walkthrough of implemented features:
 
 
-https://github.com/jcas96/web102_prework/blob/main/seamonsterTest.gif
+<img src="https://github.com/jcas96/web102_prework/blob/main/seamonsterTest.gif"/>
 
 GIF created with ...  QuickTime Player
 
