@@ -1,75 +1,267 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
+
+:root {
+	--primary-color: #26333c;
+	--secondary-color: rgb(238, 238, 238); /* #a8b0b */
+	cursor: default;
+}
 
 body {
-    font-family: 'Cabin';
-    background-color: #758190;
+	font-family: "Cabin";
+	margin: 0;
+	padding: 0;
+	background-color: var(--primary-color);
 }
 
 #tentacles {
-    width: 50px;
+	width: 50px;
 }
 
-.header {
-    display: flex;
-    background-color: lightblue;
-    padding: 1%;
-    align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
+header {
+	/* display: flex;
+	background-color: lightblue;
+	padding: 1%;
+	align-items: center;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top: -10px; */
+	position: relative;
+	width: 100%;
+	height: 400px;
 }
 
 .stats-container {
-    display: flex;
+	display: flex;
 }
 
 .stats-card {
-    background-color: #a8b0bc;
-    border-radius: 7px;
-    padding: 1%;
-    margin: 1%;
-    width: 100%;
-    text-align: center;
+	background-color: var(--secondary-color);
+	border-radius: 4px;
+	padding: 1%;
+	margin: 1%;
+	width: 100%;
+	text-align: center;
+	box-shadow: 0px 0px 5px black;
+	color: var(--primary-color);
 }
 
-#num-contributions, #total-raised, #num-games {
-    font-size: 50px;
+#num-contributions,
+#total-raised {
+	font-size: 4em;
+	color: green;
+	font-family: monospace;
+}
+
+#num-games {
+	font-size: 4em;
+	color: var(--primary-color);
+	font-family: monospace;
 }
 
 #games-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	color: var(--primary-color);
 }
 
 .game-img {
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #FFFFFF;
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #ffffff;
 }
 
 .game-card {
-    background-color: #FFFFFF;
-    padding: 1%;
-    margin: 1%;
-    width: 300px;
-    text-align: center;
-    border-radius: 7px;
+	background-color: var(--secondary-color);
+	padding: 1%;
+	margin: 1%;
+	width: 300px;
+	text-align: center;
+	border-radius: 7px;
+	transition: transform 0.3s ease;
+	overflow: hidden;
 }
 
 .game-card:hover {
-    cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+	cursor: pointer;
+	box-shadow: 0 0 30px lightblue;
+	transform: scale(1.05);
 }
 
-#button-container {
-    text-align: center;
+.game-card-description {
+	text-align: left;
 }
 
-button {
-    font-family: 'Cabin';
-    border: none;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 7px;
+.button-container {
+	text-align: center;
+}
+
+.button-container button {
+	font-family: "Cabin";
+	border: none;
+	padding: 1%;
+	margin: 1%;
+	border-radius: 7em;
+	width: 25%;
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	transition: transform 0.3s ease;
+}
+
+.button-container button:hover {
+	cursor: pointer;
+	box-shadow: 0 0 30px lightblue;
+}
+
+.button-container button:active {
+	transform: scale(0.9);
+}
+
+.center {
+	max-width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center-align {
+	text-align: center;
+}
+
+.hero-image {
+	width: 100%;
+	height: 50vh;
+	background-image: url("assets/sea-monster-attack.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.header-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: var(--secondary-color);
+	text-shadow: 0px 0px 10px black;
+	letter-spacing: 2px;
+	font-size: 20px;
+	position: relative;
+	z-index: 2;
+}
+
+.grid-container {
+	display: grid;
+}
+
+#about-us-text {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: var(--secondary-color);
+	text-shadow: 0px 0px 10px black;
+	font-size: 20px;
+	/* border: 2px solid red; */
+	/* text-align: right; */
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	letter-spacing: 5px;
+	/* margin-left: 300px; */
+}
+
+#description-container {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: var(--secondary-color);
+	height: 100%;
+	text-align: left;
+	/* padding-left: 20px; */
+	padding-right: 20px;
+	/* align-items: center; */
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	/* border: 2px solid white; */
+}
+
+/* #unfunded-games {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: var(--text-color);
+} */
+
+.about-us-section {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	/* grid-template-rows: auto auto; */
+	gap: 25px;
+	/* border: 2px solid white; */
+	margin: 2%;
+	/* align-items: center;
+	align-self: center;
+	text-align: center; */
+}
+
+.grid-container div {
+	/* background-color: white; */
+	text-align: center;
+	/* border: 1px solid white; */
+}
+
+main {
+	position: relative;
+	z-index: 1;
+}
+
+.hero-image::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 400px;
+	background: linear-gradient(
+		to bottom,
+		rgb(255, 255, 255, 0),
+		var(--primary-color)
+	);
+}
+
+.rotated-text {
+	/* margin: 70px; */
+	transform: rotate(-90deg);
+}
+
+.stretched-text {
+	display: flex;
+	transform: scaleY(4);
+}
+
+/* .info-container {
+	width: 92%;
+	margin: auto;
+	height: 100%;
+	border: 2px solid white;
+} */
+
+#our-games {
+	font-family: monospace;
+	color: var(--secondary-color);
+	text-align: center;
+	letter-spacing: 10px;
+	font-size: 5em;
+	transform: scaleY(0.75);
+	text-shadow: 0px 0px 10px black;
+}
+
+#first-game,
+#second-game {
+	font-size: 2em;
+	color: var(--primary-color);
+	/* font-style: oblique; */
+}
+
+.footer-container {
+	background-color: #313b42;
+	text-align: center;
+	color: var(--secondary-color);
+	padding: 20px 10%;
+	margin-top: 3%;
 }
