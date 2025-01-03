@@ -23,14 +23,13 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://imgur.com/a/sea-monster-crowdfunding-gif-walkthrough-drXjjME' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://s7.gifyu.com/images/SXTUx.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with LICEcap 
 
 ## Notes
 
-The process of building this app was relatively smooth for me since the prework instructions provided excellent resources that answered most of the questions I had in the development process. Personally, I struggled the most
-when trying to understand the .reduce() method when reading the documentation provided, but I was able to find YouTube videos that explained it in a different way that made sense to me.
+Ensuring that the GIF walkthrough of the website was displaying properly on Github turned out to be one of the biggest challenges for me. The process of building the app itself, however, was relatively smooth for me since the prework instructions provided excellent resources that answered most of the questions I had in the development process. If there was one part that stood out, it was trying to understand the .reduce() method when reading the documentation provided, but I was able to find YouTube videos that explained it in a different way that made sense to me.
 
 ## License
 
