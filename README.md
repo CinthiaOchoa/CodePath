@@ -4,7 +4,7 @@ Submitted by: **Yuwen Zhang**
 
 **Crowdfunding Website** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **5** hours spent in total
+Time spent: **7** hours spent in total
 
 ## Required Features
 
@@ -23,13 +23,12 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://imgur.com/a/drXjjME' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/sea-monster-crowdfunding-gif-walkthrough-drXjjME' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with LICEcap 
 
 ## Notes
 
-Describe any challenges encountered while building the app.
 The process of building this app was relatively smooth for me since the prework instructions provided excellent resources that answered most of the questions I had in the development process. Personally, I struggled the most
 when trying to understand the .reduce() method when reading the documentation provided, but I was able to find YouTube videos that explained it in a different way that made sense to me.
 
