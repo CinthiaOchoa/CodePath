@@ -1,8 +1,8 @@
-# WEB102 Prework - *Sea Monster Company - Prework*
+# WEB102 Prework - *Sea Monster Gaming Web*
 
 Submitted by: Destiny Rosadosalcedo
 
-**Sea Monster Company - Prework** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**Sea Monster Gaming Web** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
 Time spent: 10 hours spent in total
 
