@@ -1,23 +1,23 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - *Sea Monster Crowdfunding, LLC*
 
-Submitted by: **Your Name Here**
+Submitted by: **Rizky Said**
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**Sea Monster Crowdfunding, LLC** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: **17** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-* [ ] The introduction section explains the background of the company and how many games remain unfunded.
-* [ ] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [ ] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [ ] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+* [x] The introduction section explains the background of the company and how many games remain unfunded.
+* [x] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+* [x] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
+* [x] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [x] List anything else that you can get done to improve the app functionality!
 
 ## Video Walkthrough
 
@@ -35,6 +35,11 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
+- One of the most challenging part was trying to extract data from the GAMES_JSON file and manipulate the objects
+that was given into index.js. This is my first time working with two javascript files and 'importing' the files together.
+- I had to learn Javascript lesson on my own using Mimo.org to freshen up my js skills prior to tackling the prework, that way I get more comfortable doing the prework while gaining real-world training.
+to make the transition easier as I learn React in the next chapter of this course.
+- Getting a grasp on using Git through GitHub is also another challenge that I still need to comprehend. Through many  YouTube videos, I will get the hang on Git. In fact, this is my second attempt for committing from VSCode to GitHub correctly after making erroneous command promt to my terminal.
 
 ## License
 
