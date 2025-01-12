@@ -20,6 +20,7 @@ body {
 }
 
 .stats-container :hover {
+    /* box-shadow: 0 0 10px #FFFFFF; */
     display: flex;
     align-items: center;
     /* box-shadow: 0 0 10px #FFFFFF; */
