@@ -7,20 +7,44 @@
   </head>
 
   <body>
+
     <!-- header row with logo -->
     <div class="header">
         <img id="tentacles" src="assets/tentacles.png">
         <h1 class="header-text">Sea Monster Crowdfunding</h1>
+
+
+        <!-- this is the addition of the nav bar NEW by me -->
+
+        <nav id="navbar">
+            <ul>
+                <li><a href="#welcome-section">Welcome</a></li>
+                <li><a href="#stats-section">Stats</a></li>
+                <li><a href="#games-section">Our Games</a></li>
+            </ul>
+        </nav>
+
+        <!-- this is the addition of the nav bar NEW by me END -->
+
     </div>
 
+        <!-- Video Background -->
+        <video autoplay muted loop id="background-video">
+            <source src="assets/Water.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+<!-- Dark Overlay -->
+<div id="dark-overlay"></div>
+
     <!-- background info about company -->
-    <h2>Welcome to Sea Monster!</h2>
+    <h2 id="welcome-section">Welcome to Sea Monster!</h2>
     <div id="description-container">
         <p>The purpose of our company is to fund independent games. We've been in operation for 12 years.</p>
     </div>
-
+    
     <!-- top games & other interesting stats -->
-    <h2>Stats</h2>
+    <h2 id="stats-section">Stats</h2>
     <div class="stats-container">
         <div class="stats-card">
             <h3>Individual Contributions</h3>
@@ -48,17 +72,29 @@
     </div>
 
     <!-- list of games funded by Sea Monster -->
-    <h2>Our Games</h2>
+    <h2 id="games-section">Our Games</h2>
     <p>Check out each of our games below!</p>
     <div id="button-container">
         <button id="unfunded-btn">Show Unfunded Only</button>
         <button id="funded-btn">Show Funded Only</button>
         <button id="all-btn">Show All Games</button>
     </div>
+
+        <!-- This is the search bar I created NEW -->
+        <div id="search-container">
+            <input type="text" id="search-bar" placeholder="Search for a game..." />
+            <button id="search-btn">Search</button>
+        </div>
+        <!-- This is the search bar I created NEW END-->
+
     <div id="games-container">
 
     </div>
 
+
     <script type="module" src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
   </body>
 </html>
