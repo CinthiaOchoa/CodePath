@@ -3,6 +3,42 @@
 body {
     font-family: 'Cabin';
     background-color: #758190;
+    /*I added this new*/
+    scroll-snap-type: y mandatory;
+    /*I added this new*/
+
+}
+
+
+/* This is to create the background video style */
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Dark Overlay */
+#dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 #tentacles {
@@ -11,7 +47,7 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background-color: rgb(16, 47, 57);
     padding: 1%;
     align-items: center;
     margin-left: -10px;
@@ -19,51 +55,254 @@ body {
     margin-top: -10px;
 }
 
+.header-text{
+    color: #FFFFFF;
+    margin-left: 10px;
+
+}
+
+
+/*This is for the welcome part*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Base styling for #welcome-section */
+#welcome-section {
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    margin-left: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(0);
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    margin-top: 200px;
+
+}
+
+/* Hover effect */
+#welcome-section:hover {
+    transform: translateY(-20px);
+    opacity: 0.9;
+}
+
+/* Styling for #description-container */
+#description-container {
+    display: flex;
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+#description-container p {
+    font-size: 2rem;
+    color: white;
+    max-width: 100%;
+    text-align: center;
+    margin-left: auto;
+    line-height: 1.6;
+    font-style: italic;
+    transition: color 0.5s ease, transform 0.5s ease;
+    margin-bottom: 300px;
+    /* Add animation for description text */
+}
+
+/* Hover effect for #description-container p */
+#description-container p:hover {
+    color: lightblue;
+    transform: scale(1.05);
+}
+
+/*This is for the stats part*/
+#stats-section{
+
+        font-size: 3rem;
+            color: white;
+            text-align: center;
+            margin-left: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            transform: translateY(0);
+}
+
+
+
+/* Hover effect */
+#stats-section:hover {
+    transform: translateY(-20px);
+    opacity: 0.9;
+}
+
+/* Base styling for the stats container */
 .stats-container {
     display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(0);
 }
 
+/* Hover animation for the stats container */
+.stats-container:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px lightblue;
+    opacity: 0.95;
+}
+
+/* Base styling for individual stats cards */
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: #39507200;
     border-radius: 7px;
-    padding: 1%;
-    margin: 1%;
+    padding: 20px;
+    margin: 10px;
     width: 100%;
+    max-width: 300px;
     text-align: center;
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+    color: white;
 }
 
-#num-contributions, #total-raised, #num-games {
+/* Hover animation for individual stats cards */
+.stats-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background-color: #90a4ae00;
+}
+
+/* Styling for the stats numbers */
+#num-contributions,
+#total-raised,
+#num-games {
     font-size: 50px;
+    color: #ffffff;
+    transition: color 0.5s ease;
+}
+
+/* Hover effect for the stats numbers */
+.stats-card:hover #num-contributions,
+.stats-card:hover #total-raised,
+.stats-card:hover #num-games {
+    color: #2690ee;
+}
+
+/*This is the game section*/
+/* Centering and styling for the games section header and paragraph */
+#games-section {
+    margin-top: 300px;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(0);
+}
+
+/* Style for the paragraph under the header */
+#games-section+p {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin: 10px 0 30px;
+    line-height: 1.8;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effect */
+#games-section:hover {
+    transform: translateY(-20px);
+    opacity: 0.9;
 }
 
 #games-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
 }
 
 .game-img {
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 10px #FFFFFF;
+    box-shadow: 0 0 10px #23649d33;
 }
 
 .game-card {
-    background-color: #FFFFFF;
+    background-color: #203b5a00;
     padding: 1%;
     margin: 1%;
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    color: white;
 }
+
 
 .game-card:hover {
     cursor: pointer;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(-10px);
     box-shadow: 0 0 30px lightblue;
+    opacity: 0.95;
 }
 
+/* Base styling for the button container */
 #button-container {
     text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+
+
+/* Base styling for buttons */
+#button-container button {
+    font-family: 'Cabin', sans-serif;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 7px;
+    background-color: rgba(85, 195, 232, 0);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation for buttons */
+#button-container button:hover {
+    background-color: #0057b34c;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(85, 195, 232, 0.089);
+}
+
+/* Active state for buttons */
+#button-container button:active {
+    transform: scale(0.95);
 }
 
 button {
@@ -73,3 +312,132 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
+/* Adding this to make the search bar look better */
+/* Styling for the search bar container */
+#search-container {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+
+
+/* Styling for the search bar input */
+#search-bar {
+    width: 300px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth animation */
+}
+
+/* Focus effect for the search bar input */
+#search-bar:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px lightblue;
+    /* Add a glowing effect */
+}
+
+/* Styling for the search button */
+#search-btn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 7px;
+    background-color: rgb(30, 85, 103);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth animation */
+}
+
+/* Hover effect for the search button */
+#search-btn:hover {
+    background-color: #002751;
+    transform: translateY(-5px);
+    /* Slight upward movement */
+
+}
+
+/* Active state for the search button */
+#search-btn:active {
+    transform: scale(0.95);
+    /* Slightly shrink on click */
+}
+
+/* This is another extra addition, this time for the navbar style*/
+
+#navbar {
+    padding: 10px;
+    position: absolute;
+    top: -10;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; /* Align links to the right */
+    width: auto; /* Prevent unnecessary stretching */
+
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+}
+
+#navbar li {
+    margin: 10px 0;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+}
+
+#navbar a:hover {
+    color: #1c80d7;
+}
+
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-padding: 0;
+    }
