@@ -228,29 +228,23 @@ descriptionContainer.appendChild(paragraph);
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
 
-sortedGames =  GAMES_JSON.sort( (item1, item2) => {
+const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
     return item2.pledged - item1.pledged;
 });
 
 // use destructuring and the spread operator to grab the first and second games
 
+const [topGame, runnerUpgame, ...otherGames] = sortedgames;
 
-  const [firstGame, secondGame] = sortedGames;
-  
+//create a new element to hold the name of the top pledge game, then append it to the correct element
 
-  console.log(firstGame);
-  console.log(secondGame);
+  const topGameElement = document.createElement("p");
+  topGameElement.textContent = 'Top Game: ${topGame.name}';
+  firstGameContainer.appendChild(topGameElement);
   
-  
-  
-
-// create a new element to hold the name of the top pledge game, then append it to the correct element
 
 // do the same for the runner up item
 
-
-firstGameContainer = document.getElementById("firstGameContainer");
-secondGameContainer = document.getElementById("secondGameContainer");
-
-firstGameContainer.innerText = topFundedGames[0].name;
-secondGameContainer.innerText = topFundedGames[1].name;
+const runnerUpGameElement = document.createElement("p");
+runnerUpGameElement.textContent = 'Runner Up: ${runnerUpGame.name}';
+secondGameContainer.appendChild(runnerUpGameElement);
