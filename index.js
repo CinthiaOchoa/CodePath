@@ -34,6 +34,14 @@ function addGamesToPage(games) {
 
         let gameElement = document.createElement("div");
         gameElement.classList.add("game-card");
+        gameElement.innerHTML = 
+        `
+            <img src="${game.img}" alt="${game.name}" />
+            <h2>${game.name}</h2>
+            <p>${game.description}</p>
+        `;
+        console.log(gameElement);
+        gamesContainer.appendChild(gameElement);
         
         // create a new div element, which will become the game card
 
