@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+:root {
+    --charcoal: #264653ff;
+    --persian-green: #2a9d8fff;
+    --saffron: #e9c46aff;
+    --sandy-brown: #f4a261ff;
+    --burnt-sienna: #e76f51ff;
+}
+
 body {
-    font-family: 'Cabin';
-    background-color: #758190;
+    font-family: 'Impact', sans-serif;
+    background-color: var(--saffron);
+    color: var(--charcoal);
+    margin: 0;
+    padding: 0;
 }
 
 #tentacles {
@@ -11,16 +22,52 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
-    padding: 1%;
+    background-color: var(--persian-green);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
     align-items: center;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
 }
 
+nav {
+    background-color: var(--charcoal);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: var(--burnt-sienna);
+}
+
+#search-bar {
+    padding: 5px;
+    margin: 10px 0;
+}
+
 .stats-container {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.stats-container:hover {
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
@@ -32,7 +79,9 @@ body {
     text-align: center;
 }
 
-#num-contributions, #total-raised, #num-games {
+#num-contributions,
+#total-raised,
+#num-games {
     font-size: 50px;
 }
 
@@ -49,12 +98,19 @@ body {
 }
 
 .game-card {
-    background-color: #FFFFFF;
-    padding: 1%;
-    margin: 1%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
     width: 300px;
     text-align: center;
-    border-radius: 7px;
+}
+
+.game-card img {
+    max-width: 100%;
+    border-radius: 5px;
 }
 
 .game-card:hover {
@@ -67,9 +123,16 @@ body {
 }
 
 button {
+    background-color: var(--sandy-brown);
     font-family: 'Cabin';
     border: none;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 7px;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--burnt-sienna);
 }
