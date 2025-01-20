@@ -34,7 +34,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-![Video Walkthrough](http://i.imgur.com/link/to/your/gif/file.gif)
+![Video Walkthrough](https://media.giphy.com/media/o8DYtOY4UND8RL9joC/giphy.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
