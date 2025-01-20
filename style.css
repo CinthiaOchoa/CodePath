@@ -2,35 +2,106 @@
 
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: #698dba;
 }
 
 #tentacles {
-    width: 50px;
+    width: 80px;
 }
 
 .header {
     display: flex;
-    background-color: lightblue;
     padding: 1%;
     align-items: center;
+    justify-content: center;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+    background: url('assets/sea.jpeg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    color: rgb(108, 1, 108);
+    font-size: 20px;
+}
+
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#game-search {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: rgb(152, 191, 191);
+    color: white; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+}
+
+
+h2 {
+    text-align: center; 
+    font-size: 2rem; 
+    margin: 20px 0; 
+    color: rgb(239, 223, 239); 
+    font-family: 'Arial', sans-serif; 
+}
+
+p {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1.1em; 
+    line-height: 1.6; 
+    margin: 10px 0; 
+    color: #333333; 
+    text-align: center; 
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto;
 }
 
 .stats-container {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.stats-container:hover {
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: rgb(152, 191, 191);
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
     width: 100%;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
+
+.stats-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #d1d9e3; 
+}
+
 
 #num-contributions, #total-raised, #num-games {
     font-size: 50px;
@@ -62,7 +133,22 @@ body {
     box-shadow: 0 0 30px lightblue;
 }
 
-#button-container {
+.stats-card, .top-games div {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ #button-container {
     text-align: center;
 }
 
@@ -72,4 +158,122 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    background-color: #f5f5f5;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+} 
+
+
+button:hover {
+    background-color: rgb(152, 191, 191); 
+    color: white; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
 }
+
+
+
+/* dark mode */
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Header */
+body.dark-mode .header {
+    background: #1c1c1c; 
+    color: #ffffff; 
+}
+
+/* Search Container */
+body.dark-mode .search-container {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+body.dark-mode #game-search {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+body.dark-mode #search-btn {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+body.dark-mode #search-btn:hover {
+    background-color: #555555;
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Stats Section */
+body.dark-mode .stats-card {
+    background-color: #222222;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+body.dark-mode .stats-card:hover {
+    background-color: #333333;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Game Cards */
+body.dark-mode .game-card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+body.dark-mode .game-card:hover {
+    background-color: #333333;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons */
+body.dark-mode button {
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+}
+
+body.dark-mode button:hover {
+    background-color: #444444;
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Headings and Paragraphs */
+body.dark-mode h2, body.dark-mode h3, body.dark-mode p {
+    color: #e0e0e0;
+}
+
+/* Games Container */
+body.dark-mode #games-container {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Description */
+body.dark-mode #description-container p {
+    color: #e0e0e0;
+}
+
+/* Top Games Section */
+body.dark-mode #top-games .stats-card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Animations */
+body.dark-mode .fadeIn {
+    animation: fadeInDark 1.5s ease-in-out;
+}
+
+
