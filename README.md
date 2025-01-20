@@ -1,6 +1,4 @@
-Here’s the detailed prework in Markdown format:
 
-```markdown
 # WEB102 Prework - *SeaMonsterCrowdfunding.com*
 
 Submitted by: **Valary Anguzuzu**
@@ -72,6 +70,3 @@ GIF created with ...
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-```
-
-Copy and paste this Markdown file into your prework submission or repository! Let me know if you’d like additional adjustments. 😊
