@@ -23,17 +23,18 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://www.loom.com/share/3d270b0bb4cd4ea58cd38d24b7b05385?sid=70dc62e4-533b-48b5-96a8-dfd4d317e774' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<a href="https://www.loom.com/share/3d270b0bb4cd4ea58cd38d24b7b05385?sid=70dc62e4-533b-48b5-96a8-dfd4d317e774" title="Video Walkthrough">
+  Watch the Video Walkthrough
+</a>
 
 
 ## Notes
 
-Describe any challenges encountered while building the app.
-To Work with Reduce was bit challenging.
+To Work with Reduce Function was bit challenging.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [ Uvesh Patel ]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
