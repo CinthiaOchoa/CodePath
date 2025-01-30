@@ -270,9 +270,7 @@ function displayGames(gamesToDisplay) {
   }
 
   
-  
-  // Search functionality
-  // Search functionality
+// Search functionality
 const searchInput = document.getElementById('search-bar');
 const searchButton = document.getElementById('search-btn');
 
@@ -302,75 +300,6 @@ searchButton.addEventListener('click', function() {
     addGamesToPage(filteredGames); // Add filtered games to the page
 });
 
-  
-
-/*   document.getElementById('search-btn').addEventListener('click', function() {
-    const query = document.getElementById('search-bar').value.toLowerCase();
-    const filteredGames = games.filter(game => game.name.toLowerCase().includes(query));
-    displayGames(filteredGames);
-  });
-  
-  // Optionally, you can also make the search happen as the user types (live search)
-  document.getElementById('search-bar').addEventListener('input', function() {
-    const query = this.value.toLowerCase();
-    const filteredGames = games.filter(game => game.name.toLowerCase().includes(query));
-    displayGames(filteredGames);
-  });
-  
-  // Initial display of all games
-  displayGames(games);
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  /* // Function to display games
-  function displayGames(gamesToDisplay) {
-    const gamesContainer = document.getElementById('games-container');
-    gamesContainer.innerHTML = ''; // Clear existing games
-    
-    gamesToDisplay.forEach(game => {
-      const gameElement = document.createElement('div');
-      gameElement.classList.add('game-item');
-      gameElement.innerHTML = `
-        <h3>${game.name}</h3>
-        <p>${game.description}</p>
-      `;
-      gamesContainer.appendChild(gameElement);
-    });
-  }
-  
-  // Search functionality
-  document.getElementById('search-btn').addEventListener('click', function() {
-    const query = document.getElementById('search-bar').value.toLowerCase();
-    const filteredGames = games.filter(game => game.name.toLowerCase().includes(query));
-    displayGames(filteredGames);
-  });
-  
-  // Optionally, you can also make the search happen as the user types (live search)
-  document.getElementById('search-bar').addEventListener('input', function() {
-    const query = this.value.toLowerCase();
-    const filteredGames = games.filter(game => game.name.toLowerCase().includes(query));
-    displayGames(filteredGames);
-  });
-  
-  // Initial display of all games
-  displayGames(games); */
-  
-
 
 /* 
 document.getElementById("change-body-color-btn").addEventListener("click", function() {
@@ -378,52 +307,3 @@ document.getElementById("change-body-color-btn").addEventListener("click", funct
     document.body.style.backgroundColor = "#87CEFA"; // Light Blue
 }); */
 
-
-
-/* 
-document.getElementById("change-body-color-btn").addEventListener("click", function() {
-    // Randomly changing the background color of the body
-    const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
-    document.body.style.transition = "background-color 0.5s ease";
-    document.body.style.backgroundColor = randomColor;
-});
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* const colors = ["#ff0000", "#ff7300", "#ffff00", "#00ff00", "#0000ff", "#4b0082", "#9400d3"];
-let index = 0;
-
-function changeGradient() {
-    document.body.style.background = `linear-gradient(45deg, ${colors[index]}, ${colors[(index + 1) % colors.length]})`;
-    index = (index + 1) % colors.length;
-}
-
-setInterval(changeGradient, 3000); // Change gradient every 3 seconds */
-
-/* const colors = ["#0A2239", "#126782", "#1B998B", "#5F5980", "#4DEEEA"];
-let index = 0;
-
-function changeBackground() {
-    document.body.style.background = `linear-gradient(45deg, ${colors[index]}, ${colors[(index + 1) % colors.length]})`;
-    index = (index + 1) % colors.length;
-}
-
-setInterval(changeBackground, 15000); // Change background every 15s
-changeBackground(); // Set initial background
-
-document.getElementById('someElement').classList.add('hide');  // Add the fade-out class to an element
- */
