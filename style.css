@@ -245,6 +245,21 @@ button:hover {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
     z-index: 2;
 }
+  
+/* Focus Effect: Button */
+button:focus {
+    outline: none;
+    border: 2px solid #3399ff; /* Blue border on focus */
+    box-shadow: 0 0 15px lightblue; /* Light blue glow on focus */
+    z-index: 2;
+  }
+  
+  /* Active (Click) Effect: Button */
+  button:active {
+    background-color: #0066cc; /* Even darker blue when clicked */
+    transform: scale(0.98); /* Slight shrink effect on click */
+    z-index: 2;
+  }
 
 /* Class for Solid Background Color */
 .solid-color {
@@ -376,23 +391,3 @@ footer a:hover {
 
 
 
-
-
-
-
-
-  
-/* Focus Effect: Button */
-button:focus {
-    outline: none;
-    border: 2px solid #3399ff; /* Blue border on focus */
-    box-shadow: 0 0 15px lightblue; /* Light blue glow on focus */
-    z-index: 2;
-  }
-  
-  /* Active (Click) Effect: Button */
-  button:active {
-    background-color: #0066cc; /* Even darker blue when clicked */
-    transform: scale(0.98); /* Slight shrink effect on click */
-    z-index: 2;
-  }
