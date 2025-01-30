@@ -25,7 +25,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWwwNnViaHM3ODNjY3Fzb2NwazRhZ3duaWxicXgxcWwyNDlqdHMzbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x4kGe33CvUGWPwNA8w/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExejBiZGlldWczbGl6enY4bjhmc3ZndWhjY3VidjZiaHpxbmc5ZmRxbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bSXm685A7TMflHGICx/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Kap  
