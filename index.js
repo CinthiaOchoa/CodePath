@@ -47,12 +47,13 @@ function addGamesToPage(games) {
     // between the end of the src attribute and the end of the tag ("/>")
     gameCard.innerHTML = `
     <img class="game-img" src="${game.img}" alt="${game.name}">
-    <h3>${game.name}</h3>
+    <h3 class="game-title">${game.name}</h3> <!-- Add this class here -->
     <p>${game.description}</p>
     <p><strong>Pledged: $${game.pledged.toLocaleString()}</strong></p>
     <p><strong>Goal: $${game.goal.toLocaleString()}</strong></p>
     <p><strong>Backers: ${game.backers.toLocaleString()}</strong></p>
-  `;  
+    `;
+    
     
     // Step 4: Append the new game card to the games container
     //--> Find the games container in the DOM and append the new game card to it    
@@ -133,7 +134,7 @@ function filterFundedOnly() {
     const fundedGames = GAMES_JSON.filter(game => game.pledged >= game.goal);
 
     // Log the length of the filtered array to see how many funded games there are    
-    console.log(filterFundedOnly.length);
+    console.log(fundedGames.length);
 
     // use the function we previously created to add funded games to the DOM
     addGamesToPage(fundedGames);    
@@ -212,7 +213,9 @@ secondGameElement.textContent = `Runner-Up: ${secondGame.name}`;
 //--> Append it to the second game container
 secondGameContainer.appendChild(secondGameElement);
 
-
+/************************************************************************************
+ * Other Functions:
+ */
 
 // Get the button element
 const returnTopButton = document.getElementById('return-top');
@@ -231,20 +234,196 @@ returnTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Search functionality
-const searchButton = document.getElementById('search-btn');
-const searchBar = document.getElementById('search-bar');
 
-searchButton.addEventListener('click', () => {
-    const query = searchBar.value.toLowerCase();
-    const games = document.querySelectorAll('#games-container .game-card');
-    games.forEach(game => {
-        const gameName = game.querySelector('.game-title').textContent.toLowerCase();
-        if (gameName.includes(query)) {
-            game.style.display = 'block';
-        } else {
-            game.style.display = 'none';
-        }
+
+// Search functionality
+// Sample games data (you can replace this with real data or fetch it from an API)
+/* const games = [
+    { name: 'Game 1', description: 'An exciting action game' },
+    { name: 'Game 2', description: 'A thrilling adventure game' },
+    { name: 'Game 3', description: 'A relaxing puzzle game' },
+    // Add more games here
+  ]; */
+
+const games= GAMES_JSON;
+
+// Function to display games as cards
+function displayGames(gamesToDisplay) {
+    const gamesContainer = document.getElementById('games-container');
+    gamesContainer.innerHTML = ''; // Clear existing games
+    
+    gamesToDisplay.forEach(game => {
+      const gameCard = document.createElement('div');
+      gameCard.classList.add('game-card');
+      
+      gameCard.innerHTML = `
+        <img src="${game.imageUrl}" alt="${game.name}" class="game-image">
+        <div class="game-info">
+          <h3 class="game-name">${game.name}</h3>
+          <p class="game-description">${game.description}</p>
+          <button class="fund-btn">Fund This Game</button>
+        </div>
+      `;
+      
+      gamesContainer.appendChild(gameCard);
     });
-});
+  }
+
   
+  
+  // Search functionality
+  // Search functionality
+const searchInput = document.getElementById('search-bar');
+const searchButton = document.getElementById('search-btn');
+
+// Handle the search input change
+searchInput.addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    
+    // Filter the games based on the search query
+    const filteredGames = GAMES_JSON.filter(game =>
+        game.name.toLowerCase().includes(query)
+    );
+
+    // Update the displayed games
+    deleteChildElements(gamesContainer); // Clear current games
+    addGamesToPage(filteredGames); // Add filtered games to the page
+});
+
+// Optional: Search when clicking the search button
+searchButton.addEventListener('click', function() {
+    const query = searchInput.value.toLowerCase();
+    
+    const filteredGames = GAMES_JSON.filter(game =>
+        game.name.toLowerCase().includes(query)
+    );
+
+    deleteChildElements(gamesContainer); // Clear current games
+    addGamesToPage(filteredGames); // Add filtered games to the page
+});
+
+  
+
+/*   document.getElementById('search-btn').addEventListener('click', function() {
+    const query = document.getElementById('search-bar').value.toLowerCase();
+    const filteredGames = games.filter(game => game.name.toLowerCase().includes(query));
+    displayGames(filteredGames);
+  });
+  
+  // Optionally, you can also make the search happen as the user types (live search)
+  document.getElementById('search-bar').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const filteredGames = games.filter(game => game.name.toLowerCase().includes(query));
+    displayGames(filteredGames);
+  });
+  
+  // Initial display of all games
+  displayGames(games);
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* // Function to display games
+  function displayGames(gamesToDisplay) {
+    const gamesContainer = document.getElementById('games-container');
+    gamesContainer.innerHTML = ''; // Clear existing games
+    
+    gamesToDisplay.forEach(game => {
+      const gameElement = document.createElement('div');
+      gameElement.classList.add('game-item');
+      gameElement.innerHTML = `
+        <h3>${game.name}</h3>
+        <p>${game.description}</p>
+      `;
+      gamesContainer.appendChild(gameElement);
+    });
+  }
+  
+  // Search functionality
+  document.getElementById('search-btn').addEventListener('click', function() {
+    const query = document.getElementById('search-bar').value.toLowerCase();
+    const filteredGames = games.filter(game => game.name.toLowerCase().includes(query));
+    displayGames(filteredGames);
+  });
+  
+  // Optionally, you can also make the search happen as the user types (live search)
+  document.getElementById('search-bar').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const filteredGames = games.filter(game => game.name.toLowerCase().includes(query));
+    displayGames(filteredGames);
+  });
+  
+  // Initial display of all games
+  displayGames(games); */
+  
+
+
+/* 
+document.getElementById("change-body-color-btn").addEventListener("click", function() {
+    document.body.style.transition = "background-color 2s ease-in-out";
+    document.body.style.backgroundColor = "#87CEFA"; // Light Blue
+}); */
+
+
+
+/* 
+document.getElementById("change-body-color-btn").addEventListener("click", function() {
+    // Randomly changing the background color of the body
+    const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+    document.body.style.transition = "background-color 0.5s ease";
+    document.body.style.backgroundColor = randomColor;
+});
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const colors = ["#ff0000", "#ff7300", "#ffff00", "#00ff00", "#0000ff", "#4b0082", "#9400d3"];
+let index = 0;
+
+function changeGradient() {
+    document.body.style.background = `linear-gradient(45deg, ${colors[index]}, ${colors[(index + 1) % colors.length]})`;
+    index = (index + 1) % colors.length;
+}
+
+setInterval(changeGradient, 3000); // Change gradient every 3 seconds */
+
+/* const colors = ["#0A2239", "#126782", "#1B998B", "#5F5980", "#4DEEEA"];
+let index = 0;
+
+function changeBackground() {
+    document.body.style.background = `linear-gradient(45deg, ${colors[index]}, ${colors[(index + 1) % colors.length]})`;
+    index = (index + 1) % colors.length;
+}
+
+setInterval(changeBackground, 15000); // Change background every 15s
+changeBackground(); // Set initial background
+
+document.getElementById('someElement').classList.add('hide');  // Add the fade-out class to an element
+ */

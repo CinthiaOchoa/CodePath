@@ -8,30 +8,53 @@ html {
 /* Apply Cabin font globally */
 h1, h3, a {
     font-family: 'Cabin', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    color: #FFFF00;
 }
 
+/* Body Styles */
 body {
-    animation: smoothBackground 15s infinite alternate; /* Smooth cycling background */
     font-family: 'Cabin', sans-serif;
-    background-color: #f4f9fc;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    color: #e0e0e0; /* Light gray text for readability */
+    background: linear-gradient(90deg, #00bcd4, #0097a7, #006064);
+    background-size: 300% 300%;
+    animation: bodyGradientFade 12s infinite alternate ease-in-out;
+    transition: background-color 2s ease-in-out;
 }
 
-/* Smooth Background Animation */
-@keyframes smoothBackground {
-    0% {
-        background-color: lightblue;
-    }
-    50% {
-        background-color: #e6f7ff; /* Lighter shade of blue */
-    }
-    100% {
-        background-color: lightblue;
-    }
+/* Smooth Gradient Animation */
+@keyframes bodyGradientFade {
+    0% { background: linear-gradient(90deg, #00bcd4, #0097a7, #006064); }
+    50% { background: linear-gradient(90deg, #4caf50, #388e3c, #1b5e20); }
+    100% { background: linear-gradient(90deg, #00bcd4, #0097a7, #006064); }
 }
 
+/* Paragraph Styling */
+p {
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #e0e0e0; /* Soft gray text to match the body */
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 800px;
+    background-color: #00796b; /* Muted teal background to complement body */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+p:hover {
+    background-color: #e6f7ff; /* Light blue background on hover */
+    transform: scale(1.02); /* Slight scale effect */
+    color: #003c3c; /* Darker text color for better contrast on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Navigation Bar */
+/* Navigation Bar */
+/* Navigation Bar */
 /* Navigation Bar */
 .nav-bar {
     background-color: lightblue;
@@ -52,44 +75,49 @@ body {
 
 .nav-bar a {
     text-decoration: none;
-    color: #000;
+    color: #333; /* Darker text color for better readability */
     font-weight: bold;
     font-size: 18px;
-    transition: color 0.3s;
+    transition: color 0.3s, text-shadow 0.3s, background-color 0.3s; /* Added background-color transition */
 }
 
 .nav-bar a:hover {
-    color: #ff6f61; /* Add a hover color */
+    color: #ffffff; /* White text on hover for better contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Stronger text shadow */
+    background-color: #ff6f61; /* Add a background color on hover for more contrast */
+    padding: 5px 10px;
+    border-radius: 5px;
 }
+
+.nav-bar a:active {
+    background-color: #e55b50; /* Slightly darker background on active for a press effect */
+}
+
 
 /* Header */
 .header {
     display: flex;
     align-items: center;
     margin: 0 -10px;
-    background: linear-gradient(to right, lightblue, #a2c8f2); /* Soothing gradient */
     color: #003366;
     padding: 30px;
     text-align: center;
-    animation: fadeInHeader 3s ease-out;
+    animation: gradientAnimation 6s infinite alternate;
+    background: linear-gradient(45deg, #0A2239, #1E3A5F, #5F5980, #126782, #2C6E91, #1B998B);
+    background-size: 400% 400%;
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .header-text {
     color: #fff;
-    font-size: 36px;
+    font-size: 3rem;
     margin-top: 10px;
-}
-
-/* Fade-in header animation */
-@keyframes fadeInHeader {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Stats Container */
@@ -115,7 +143,7 @@ body {
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: #4db8b1; /* Soft teal to match overall theme */
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
@@ -123,6 +151,10 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+}
+
+#num-contributions, #total-raised, #num-games {
+    font-size: 3rem; /* Increased for visibility */
 }
 
 /* Flexbox container adjustments for small screens */
@@ -139,10 +171,6 @@ body {
     }
 }
 
-#num-contributions, #total-raised, #num-games {
-    font-size: 50px;
-}
-
 #games-container {
     display: flex;
     flex-wrap: wrap;
@@ -157,7 +185,7 @@ body {
 }
 
 .game-card {
-    background-color: #d6f0ff; /* Soft light blue */
+    background-color: #4db8b1; /* Soft light blue */
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -173,62 +201,56 @@ body {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Glowing shadow */
 }
 
-/* Button Styling */
-/* Wrapper for centering the button */
-.center-container {
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+/* Basic styling for games */
+.game-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
   }
-/* Styling for Buttons */
+  
+  .game-item h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+  
+  .game-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }  
+
+/* Button Styling */
+.center-container {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button Styles */
 button {
-/*  text-align: center;
-  font-family: 'Cabin', sans-serif;
-  background-color: #4da6ff; /* Soft blue background 
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition for hover effects 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Light shadow for depth 
-  position: relative; /* For positioning the floating effect 
-  z-index: 1;
-*/
-  background-color: #4da6ff; /* Green background */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Hover Effect: Button */
 button:hover {
-  background-color: #3399ff; /* Darker blue on hover */
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
-  z-index: 2; /* Float effect on hover */
+    background-color: #555;
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    z-index: 2;
 }
 
-/* Focus Effect: Button */
-button:focus {
-  outline: none;
-  border: 2px solid #3399ff; /* Blue border on focus */
-  box-shadow: 0 0 15px lightblue; /* Light blue glow on focus */
-  z-index: 2; /* Keep the focus on top */
+/* Class for Solid Background Color */
+.solid-color {
+    background-color: #87CEFA !important; /* Light Blue */
+    transition: background-color 2s ease-in-out; /* Smooth transition */
 }
-
-/* Active (Click) Effect: Button */
-button:active {
-  background-color: #0066cc; /* Even darker blue when clicked */
-  transform: scale(0.98); /* Slight shrink effect on click */
-  z-index: 2; /* Keep the button floating while clicked */
-}
-
 
 /* Styling for Return to Top button */
 .return-top-btn {
@@ -243,25 +265,19 @@ button:active {
     border: none;
     cursor: pointer;
     opacity: 0;
-    animation: floatButton 3s ease-in-out infinite; /* Floating effect */
+    animation: floatButton 3s ease-in-out infinite;
 }
 
 .return-top-btn:hover {
     background-color: #3399ff;
-    transform: scale(1.1); /* Slight zoom effect */
-    box-shadow: 0 0 20px lightblue; /* Light blue glow effect */
+    transform: scale(1.1);
+    box-shadow: 0 0 20px lightblue;
 }
 
 @keyframes floatButton {
-    0% {
-        transform: translateY(10px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(10px);
-    }
+    0% { transform: translateY(10px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(10px); }
 }
 
 /* Show the button when scrolling */
@@ -296,50 +312,87 @@ a:hover {
     margin-right: 10px;
 }
 
-#search-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: lightblue;
-    border: none;
-    border-radius: 5px;
+.search-button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    margin-left: 10px;
     cursor: pointer;
-}
-
-#search-btn:hover {
-    background-color: #ff6f61; /* Hover effect */
-    color: white;
-}
+    opacity: 0.7;  /* Makes the button less prominent */
+    transition: opacity 0.3s ease;
+  }
+  
+  .search-button:hover {
+    opacity: 1;  /* Full opacity on hover */
+  }
+  
 
 /* Additional Styling */
 h2 {
     font-family: 'Cabin', sans-serif;
     text-align: center;
     margin: 20px;
-    color: #333;
+    color: #f4f4f4;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Optional text shadow for better readability */
+}
+
+h2:hover, h3:hover {
+    color: #ffffff; /* Change color on hover to white for emphasis */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Slightly stronger text shadow on hover */
 }
 
 .game-title {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
 }
 
-/* Styling for Paragraphs */
-p {
-    font-family: 'Cabin', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    margin: 20px auto;
-    padding: 10px;
-    max-width: 800px; /* Limit the width to make paragraphs more readable */
-    background-color: #f9f9f9; /* Light background to make text stand out */
-    border-radius: 8px; /* Rounded corners for a soft look */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: all 0.3s ease; /* Smooth transition on hover */
+/* Footer */
+footer {
+    background-color: #003366;
+    color: #f4f4f4;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #f4f4f4;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff6f61;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/* Focus Effect: Button */
+button:focus {
+    outline: none;
+    border: 2px solid #3399ff; /* Blue border on focus */
+    box-shadow: 0 0 15px lightblue; /* Light blue glow on focus */
+    z-index: 2;
   }
   
-  p:hover {
-    background-color: #e6f7ff; /* Change background on hover */
-    transform: scale(1.02); /* Slight zoom effect on hover */
+  /* Active (Click) Effect: Button */
+  button:active {
+    background-color: #0066cc; /* Even darker blue when clicked */
+    transform: scale(0.98); /* Slight shrink effect on click */
+    z-index: 2;
   }
-  
