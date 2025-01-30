@@ -1,10 +1,10 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - *Sea Monster Crowdfunding*
 
 Submitted by: **Tasneem Shabana**
 
-**Sea** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**Sea Monster Crowdfunding** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **10** hours spent in total
+Time spent: **18** hours spent in total
 
 ## Required Features
 
@@ -18,6 +18,15 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [x] List anything else that you can get done to improve the app functionality!
+* [x] Navigation Bar: A navigation bar at the top of the page to help users navigate the website easily.
+* [x] Return to Top: A button or link that allows users to quickly return to the top of the page.
+* [x] Auto Search Functionality: A live search bar that automatically filters games based on the user's input without needing to press a search button.
+* [x] Mobile Optimization: The website is responsive, ensuring that it looks good and functions well on various mobile devices.
+* [x] Social Media Sharing: Options for users to share crowdfunding campaigns on social media to promote the games and increase visibility.
+* [x] Dynamic Gradient Animation: Subtle shifts in the background colors create an engaging experience.
+* [x] Float Effect for "Return to Top" Button: Added to make it more interactive, encouraging user engagement.
+* [x] Smooth Transitions and Hover Effects: Buttons, navigation links, and text elements have smooth effects, creating a more dynamic and engaging interface.
+* [x] Improved Visual Flow: The stats container, game cards, and buttons now have hover animations, adding visual interest to each section.
 
 ## Video Walkthrough
 
@@ -27,6 +36,7 @@ Here's a walkthrough of implemented features:
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
+MP4 created with Xbox Game Bar!
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -35,6 +45,13 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+1. Design and User Experience (UX)
+Challenge: Creating an intuitive, user-friendly design that aligns with the app’s purpose can be difficult. Balancing aesthetic appeal with usability is often tricky.
+Solution: Conduct user testing with real users, gather feedback, and iterate on the design to ensure ease of use. Tools like wireframes and prototypes can help visualize the design and gather early feedback.
+2. Debugging and Testing
+Challenge: Identifying and fixing bugs can be difficult, especially when they arise in edge cases or when multiple components of the app interact in unexpected ways.
+Solution: Implement unit tests, integration tests, and end-to-end tests to catch issues early. Utilizing debugging tools and logging can help track down elusive bugs. Also, employing test-driven development (TDD) can help ensure code reliability. (Note: I did not do most of these tests when working with the website)
 
 ## License
 
