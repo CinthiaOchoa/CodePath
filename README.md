@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='[(https://i.imgur.com/QbJ4M0K.mp4)](https://i.imgur.com/QbJ4M0K.mp4)' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Screenshot for macOS
@@ -36,12 +36,7 @@ GIF created with Screenshot for macOS
 
 Challenges encountered while building the app:
 
-Time! I am a full-time student and I work full-time as well. I was made aware of the opportunity to take a course with CodePath just yesterday!
-A coworker of mine mentioned how great of a program it seemed for me. So, late at night, after work, I looked into CodePath's website and found the application.
-I submitted my application and found out there was pre-work, and would you know it's due tomorrow night after an OT (overtime) shift I had accepted just that day.
-Regardless of the time and circumstances, I decided to give it my best shot to complete by deadline. This app represents 4 hours of solving the pre-work challenges
-after a 10 hour work day. I am proud of what I have accomplished and I am proud that I have overcome all obstacles of exhaustion, lack of time, and anxiety, to
-complete what I had dedicated myself to accomplishing.
+My biggest challenge was the accelerated timeline to complete the app. Due to a last-minute notification of this application and pre-work, as well as the nature of my work and school schedule, my time to build the app was relegated to a 4 hour window after school and work hours. This made speed and efficiency key, including in topics where I have limited experience. Despite the compressed timeline, I was able to fill gaps in my knowledge and complete all tasks included in the assessment.
 
 ## License
 
