@@ -11,5 +11,16 @@
 
     Password for Challenge #2: OOZEdiveTRAPpine
 
+- 3/19/2025
+    Challenge #2:
+    1. Secret Key Component 1: How many properties does each game have?
+        A. 6
+    2. Secret Key Component 2: What is the id of the HTML element that will display a list of all games?
+        A. games-container
+    3. Secret Key Component 3: Which selector would select all elements with the stats-card class?
+        A. .stats-card
+    4. Secret Key Conponent 4: Which line number in index.js contains the start of a loop?
+        A. 15
 
-
+    Password for Challenge #3: 6games-container.stats-card15
+    
