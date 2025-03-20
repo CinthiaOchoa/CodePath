@@ -12,6 +12,7 @@
     Password for Challenge #2: OOZEdiveTRAPpine
 
 
+
 - 3/19/2025
     Challenge #2:
         1. How many properties does each game have?
@@ -25,6 +26,7 @@
 
     Password for Challenge #3: 6games-container.stats-card15
     
+
     Challenge #3:
         1. How many times will this loop run when it is called with the argument GAMES_JSON?
             A. 11
@@ -35,6 +37,7 @@
 
     Password for Challenge #4: 11seafoamGAMES_JSON
 
+
     Challenge #4:
         1. What value is now displayed under the Individual Contributions heading? 
             A. 19187
@@ -44,3 +47,20 @@
             A. The arrow function does not add sum and animal.charAt(0), so it will return only "c" (keyword: BRAIN) 
 
     Password for Challenge #5: 19187800268BRAIN
+
+
+    Challenge #5:
+        1. How many games are in the array returned by filterUnfundedOnly?
+            A. 7
+        2. How many games are in the array returned by filterFundedOnly?
+            A. 4
+        3. What would happen if the deleteChildElements function was never called within the three event handlers you wrote? 
+            A. The buttons would always add their list of games to the games already displayed, creating a growing list of games. (keyword: FLANNEL)
+        4.  Which type of event does each button listen for? 
+            A. click
+
+    Password for Challenge #6: 74FLANNELclick
+
+
+    Challenge #6:
+        
