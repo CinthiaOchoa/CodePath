@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<a href='https://www.loom.com/share/20ee18a171304db0b10ab163f9ed8c0a?sid=c4fb3bfd-ff5d-4998-9c27-b0c173286cb4' target='_blank'>Website Tour</a>
+<a href='https://www.loom.com/share/20ee18a171304db0b10ab163f9ed8c0a?sid=c4fb3bfd-ff5d-4998-9c27-b0c173286cb4' target='blank'>Website Tour</a>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Loom.
