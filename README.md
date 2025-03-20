@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/aa043833044e42d7b2e32003660d85bb?sid=80c2a611-8cce-49c8-8796-dfe294c20dc1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<a href='https://www.loom.com/share/20ee18a171304db0b10ab163f9ed8c0a?sid=c4fb3bfd-ff5d-4998-9c27-b0c173286cb4' target='_blank'>Website Tour</a>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Loom.
