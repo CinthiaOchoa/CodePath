@@ -41,7 +41,7 @@ function addGamesToPage(games) {
         // between the end of the src attribute and the end of the tag ("/>")
         game.innerHTML = `
             <img src="${gameInfo.img}" class="game-img" />
-            <h1>Name: ${gameInfo.name}</h1>
+            <h1>${gameInfo.name}</h1>
             <p>${gameInfo.description}</p>
             <p>Pledged: ${gameInfo.pledged}</p>
             <p>Goal: ${gameInfo.goal}</p>
@@ -92,7 +92,7 @@ raisedCard.innerHTML = `$${totalRaised.toLocaleString('en-US')}`;
 const gamesCard = document.getElementById("num-games");
 
 const totalGames = GAMES_JSON.reduce((acc) => {
-    return acc++;
+    return acc + 1;
 }, 0);
 
 gamesCard.innerHTML = totalGames.toLocaleString('en-US');
@@ -160,13 +160,14 @@ const descriptionContainer = document.getElementById("description-container");
 // use filter or reduce to count the number of unfunded games
 const numOfUnfunded = GAMES_JSON.reduce((acc, game) => {
     if(game.goal > game.pledged) {
-        return acc++;
+        return acc + 1;
     }
+    return acc;
 }, 0);
 
 // create a string that explains the number of unfunded games using the ternary operator
-const displayStr = `A total of ${totalRaised.toLocaleString("en-US")} has been raised for ${(totalGames-numOfUnfunded) > 1 ? "games" : "game"}. 
-Currently ${numOfUnfunded > 1 ? "games" : "game"} We need your help to fund these amazing games!`;
+const displayStr = `A total of $${totalRaised.toLocaleString("en-US")} has been raised for ${(totalGames-numOfUnfunded) > 1 ? `${totalGames-numOfUnfunded} games` : ' 1 game'}. 
+Currently, ${numOfUnfunded === 1 ? "1 game" : `${numOfUnfunded} games`} remain unfunded. We need your help to fund these amazing games!`;
 
 // create a new DOM element containing the template string and append it to the description container
 let paragraphElement = document.createElement('p');
@@ -187,7 +188,27 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
+const [firstGame, secondGame] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+firstGameContainer.append(firstGame.name);
 
 // do the same for the runner up item
+secondGameContainer.append(secondGame.name);
+
+
+
+// Added JS
+
+// Adds box-shadow for limited time after clicking a button
+const buttons = document.querySelectorAll('#button-container button');
+
+allBtn.classList.add('click');
+
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        buttons.forEach(btn => btn.classList.remove('click'));
+        
+        button.classList.add('click');  
+    });
+})

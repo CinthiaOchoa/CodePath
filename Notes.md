@@ -76,4 +76,11 @@
 
 
     Challenge #7:
-        
+        1. What is the first word of the most funded game? 
+            A. Zoo
+        2. What is the first word of the second most funded game?
+            A. How
+        3. What is the value of ...rest in the following code segment? 
+            A. [3, 4, 5, 6] (keyword: CEDAR)
+
+    Password for Final PDF: ZooHowCEDAR

@@ -12,6 +12,8 @@ body {
 .header {
     display: flex;
     background-color: lightblue;
+    border-bottom: double;
+    border-width: 5px;
     padding: 1%;
     align-items: center;
     margin-left: -10px;
@@ -69,8 +71,9 @@ body {
 }
 
 #button-container {
-    text-align: center;
+    text-align: right;
 }
+
 
 button {
     font-family: 'Cabin';
@@ -78,4 +81,43 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+
+
+/* Added CSS */
+
+h2 {
+    font-size: 2.5em;
+    line-height: 0.5;
+}
+
+.padding {
+    padding: 2%;
+}
+
+.welcome {
+    background-color: lightblue;
+    border: double;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: black;
+    padding: 1%;
+    margin: 1%;
+    text-align: center;
+}
+
+.sectionheader {
+    font-size: 2.5em;
+    border-bottom: double;
+    border-width: 5px;
+    text-align: center;
+}
+
+.centertext {
+    text-align: center;
+}
+
+button.click {
+    box-shadow: 0 0 30px lightblue;
 }
