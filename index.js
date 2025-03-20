@@ -41,11 +41,11 @@ function addGamesToPage(games) {
         // between the end of the src attribute and the end of the tag ("/>")
         game.innerHTML = `
             <img src="${gameInfo.img}" class="game-img" />
-            <h1>Name: ${gameInfo.name} </h1>
-            <p>${gameInfo.description} </p>
-            <p>Pledged: ${gameInfo.pledged} </p>
-            <p>Goal: ${gameInfo.goal} </p>
-            <p>Backers: ${gameInfo.backers} </p>
+            <h1>Name: ${gameInfo.name}</h1>
+            <p>${gameInfo.description}</p>
+            <p>Pledged: ${gameInfo.pledged}</p>
+            <p>Goal: ${gameInfo.goal}</p>
+            <p>Backers: ${gameInfo.backers}</p>
         `;
 
         // append the game to the games-container
@@ -92,7 +92,7 @@ raisedCard.innerHTML = `$${totalRaised.toLocaleString('en-US')}`;
 const gamesCard = document.getElementById("num-games");
 
 const totalGames = GAMES_JSON.reduce((acc) => {
-    return acc + 1;
+    return acc++;
 }, 0);
 
 gamesCard.innerHTML = totalGames.toLocaleString('en-US');
@@ -158,12 +158,21 @@ allBtn.addEventListener("click", showAllGames);
 const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
-
+const numOfUnfunded = GAMES_JSON.reduce((acc, game) => {
+    if(game.goal > game.pledged) {
+        return acc++;
+    }
+}, 0);
 
 // create a string that explains the number of unfunded games using the ternary operator
-
+const displayStr = `A total of ${totalRaised.toLocaleString("en-US")} has been raised for ${(totalGames-numOfUnfunded) > 1 ? "games" : "game"}. 
+Currently ${numOfUnfunded > 1 ? "games" : "game"} We need your help to fund these amazing games!`;
 
 // create a new DOM element containing the template string and append it to the description container
+let paragraphElement = document.createElement('p');
+paragraphElement.innerHTML = `${displayStr}`;
+descriptionContainer.append(paragraphElement);
+
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games

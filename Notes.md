@@ -63,4 +63,17 @@
 
 
     Challenge #6:
+        1. Which function adds correct commas and punctuation to a number, e.g. displaying 100000 as 100,000? 
+            A. toLocaleString
+        2. What is the opening tag of the HTML element you appended your newly created <p> element to?
+            A. <div>
+        3. Which option would correctly display "Hello {name}" if a user is logged in, and simply "Hello!" if the user is not logged in?
+            A. isLoggedIn ? `Hello ${user.name}` : "Hello!"; (keyword: 1) 
+        4. What does the following code segment return when called with true? 
+            A. $2.00 (keyword: IVY) 
+
+    Password for Challenge #7: toLocaleString<div>1IVY
+
+
+    Challenge #7:
         
