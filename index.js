@@ -114,8 +114,7 @@ function filterUnfundedOnly() {
     addGamesToPage(unfundedGames);
     console.log(filterFundedOnly);
 }
-filterUnfundedOnly();
-
+showAllGames();
 function filterFundedOnly() {
     // Clear the games container
     deleteChildElements(gamesContainer);
@@ -169,7 +168,11 @@ console.log("Number of unfunded games:", numberOfUnfundedGames);
 
 const explanation = `
     A total of $${totalRaised.toLocaleString()} has been raised for ${totalGames} game${totalGames === 1 ? '' : 's'}. 
-    This incredible support from the community highlights the passion and dedication towards bringing these projects to life. 
+    This incredible support from the community highlights the passion and dedication towards bringing these projects to life. For over a decade, we have been committed to supporting independent game developers,providing them with the resources they need to bring their unique visions to life.
+    
+    Our mission is to champion creativity and innovation, helping passionate creators turn their ideas into fully realized gaming experiences.
+    From immersive storytelling to groundbreaking mechanics, we back projects that push boundaries and inspire players worldwide. 
+    At Sea Monster, we believe that every game has the potential to leave a lasting impact, and we are dedicated to fostering a thriving community where indie developers can flourish.
     
 `;
 
