@@ -29,26 +29,33 @@ const gamesContainer = document.getElementById("games-container");
 function addGamesToPage(games) {
 
     // loop over each item in the data
-
-
+    games.forEach(gameInfo => {
         // create a new div element, which will become the game card
-
-
+        const game = document.createElement('div');
         // add the class game-card to the list
-
+        game.classList.add('game-card');
 
         // set the inner HTML using a template literal to display some info 
         // about each game
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
-
+        game.innerHTML = `
+            <img src="${gameInfo.img}" class="game-img" />
+            <h1>${gameInfo.name}</h1>
+            <p>${gameInfo.description}</p>
+            <p>Pledged: ${gameInfo.pledged}</p>
+            <p>Goal: ${gameInfo.goal}</p>
+            <p>Backers: ${gameInfo.backers}</p>
+        `;
 
         // append the game to the games-container
-
+        gamesContainer.append(game);
+    });
 }
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
+addGamesToPage(GAMES_JSON)
 
 
 /*************************************************************************************
@@ -61,19 +68,34 @@ function addGamesToPage(games) {
 const contributionsCard = document.getElementById("num-contributions");
 
 // use reduce() to count the number of total contributions by summing the backers
-
+const totalContributions = GAMES_JSON.reduce((acc, game) => {
+    return acc + game.backers;
+}, 0);
 
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
+contributionsCard.innerHTML = totalContributions.toLocaleString('en-US');
 
 
 // grab the amount raised card, then use reduce() to find the total amount raised
 const raisedCard = document.getElementById("total-raised");
 
+const totalRaised = GAMES_JSON.reduce((acc, game) => {
+    return acc + game.pledged;
+}, 0)
+
 // set inner HTML using template literal
+raisedCard.innerHTML = `$${totalRaised.toLocaleString('en-US')}`;
+
 
 
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
+
+const totalGames = GAMES_JSON.reduce((acc) => {
+    return acc + 1;
+}, 0);
+
+gamesCard.innerHTML = totalGames.toLocaleString('en-US');
 
 
 /*************************************************************************************
@@ -87,21 +109,26 @@ function filterUnfundedOnly() {
     deleteChildElements(gamesContainer);
 
     // use filter() to get a list of games that have not yet met their goal
-
+    const notMetGoal = GAMES_JSON.filter((game) => {
+        return game.goal > game.pledged;
+    });
 
     // use the function we previously created to add the unfunded games to the DOM
-
+    addGamesToPage(notMetGoal);
 }
+
 
 // show only games that are fully funded
 function filterFundedOnly() {
     deleteChildElements(gamesContainer);
 
     // use filter() to get a list of games that have met or exceeded their goal
-
+    const metGoal = GAMES_JSON.filter((game) => {
+        return game.pledged > game.goal;
+    });
 
     // use the function we previously created to add unfunded games to the DOM
-
+    addGamesToPage(metGoal);
 }
 
 // show all games
@@ -109,7 +136,7 @@ function showAllGames() {
     deleteChildElements(gamesContainer);
 
     // add all games from the JSON data to the DOM
-
+    addGamesToPage(GAMES_JSON);
 }
 
 // select each button in the "Our Games" section
@@ -118,7 +145,9 @@ const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
-
+unfundedBtn.addEventListener("click", filterUnfundedOnly);
+fundedBtn.addEventListener("click", filterFundedOnly);
+allBtn.addEventListener("click", showAllGames);
 
 /*************************************************************************************
  * Challenge 6: Add more information at the top of the page about the company.
@@ -129,12 +158,22 @@ const allBtn = document.getElementById("all-btn");
 const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
-
+const numOfUnfunded = GAMES_JSON.reduce((acc, game) => {
+    if(game.goal > game.pledged) {
+        return acc + 1;
+    }
+    return acc;
+}, 0);
 
 // create a string that explains the number of unfunded games using the ternary operator
-
+const displayStr = `A total of $${totalRaised.toLocaleString("en-US")} has been raised for ${(totalGames-numOfUnfunded) > 1 ? `${totalGames-numOfUnfunded} games` : ' 1 game'}. 
+Currently, ${numOfUnfunded === 1 ? "1 game" : `${numOfUnfunded} games`} remain unfunded. We need your help to fund these amazing games!`;
 
 // create a new DOM element containing the template string and append it to the description container
+let paragraphElement = document.createElement('p');
+paragraphElement.innerHTML = `${displayStr}`;
+descriptionContainer.append(paragraphElement);
+
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
@@ -149,7 +188,27 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
+const [firstGame, secondGame] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+firstGameContainer.append(firstGame.name);
 
 // do the same for the runner up item
+secondGameContainer.append(secondGame.name);
+
+
+
+// Added JS
+
+// Adds box-shadow for limited time after clicking a button
+const buttons = document.querySelectorAll('#button-container button');
+
+allBtn.classList.add('click');
+
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        buttons.forEach(btn => btn.classList.remove('click'));
+        
+        button.classList.add('click');  
+    });
+})
