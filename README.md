@@ -1,4 +1,4 @@
-# WEB102 Prework - _Name of App Here_
+# WEB102 Prework - _Sea Fund_
 
 Submitted by: **Nasimul Labib**
 
