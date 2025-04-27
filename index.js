@@ -29,7 +29,19 @@ const gamesContainer = document.getElementById("games-container");
 function addGamesToPage(games) {
 
     // loop over each item in the data
+    for(let i = 0; i < games.length; i++)
+    {
+        let gameDiv = document.createElement("div");
+        gameDiv.setAttribute("class", "game-card");
 
+        gameDiv.innerHTML = `
+        <img src="${games[i].img}" class="game-img">
+        <h2>${games[i].name}</h2>
+        <p>Info: ${games[i].description}</p>
+        <p>Pledged: $${games[i].pledged.toLocaleString("en-US")}</p>
+        `;
+        gamesContainer.appendChild(gameDiv);
+    }
 
         // create a new div element, which will become the game card
 
@@ -49,6 +61,7 @@ function addGamesToPage(games) {
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
+addGamesToPage(GAMES_JSON);
 
 
 /*************************************************************************************
@@ -58,22 +71,19 @@ function addGamesToPage(games) {
 */
 
 // grab the contributions card element
-const contributionsCard = document.getElementById("num-contributions");
-
 // use reduce() to count the number of total contributions by summing the backers
-
-
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
-
+const contributionsCard = document.getElementById("num-contributions");
+contributionsCard.innerHTML = `${GAMES_JSON.reduce( (acc, game) => { return acc + game.backers; }, 0).toLocaleString("en-US")}`;
 
 // grab the amount raised card, then use reduce() to find the total amount raised
-const raisedCard = document.getElementById("total-raised");
-
 // set inner HTML using template literal
-
+const raisedCard = document.getElementById("total-raised");
+raisedCard.innerHTML = `$${GAMES_JSON.reduce( (acc, game) => { return acc + game.pledged;}, 0).toLocaleString("en-US")}`;
 
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
+gamesCard.innerHTML = `${GAMES_JSON.length}`
 
 
 /*************************************************************************************
@@ -87,10 +97,16 @@ function filterUnfundedOnly() {
     deleteChildElements(gamesContainer);
 
     // use filter() to get a list of games that have not yet met their goal
-
+    let numUnderfundedGames = 0;
+    let underfundedGames = GAMES_JSON.filter( (games) => { 
+        if(games.pledged < games.goal) numUnderfundedGames++;
+        return games.pledged < games.goal;
+    });
 
     // use the function we previously created to add the unfunded games to the DOM
-
+    addGamesToPage(underfundedGames);
+    console.log("Underfunded Games: ", numUnderfundedGames);
+    return numUnderfundedGames;
 }
 
 // show only games that are fully funded
@@ -98,10 +114,16 @@ function filterFundedOnly() {
     deleteChildElements(gamesContainer);
 
     // use filter() to get a list of games that have met or exceeded their goal
-
+    let numFundedGames = 0;
+    let fundedGames = GAMES_JSON.filter( (games) => {
+        if(games.pledged >= games.goal) numFundedGames++;
+        return games.pledged >= games.goal;
+    });
 
     // use the function we previously created to add unfunded games to the DOM
-
+    addGamesToPage(fundedGames);
+    console.log("Funded Games: ", numFundedGames);
+    return numFundedGames;
 }
 
 // show all games
@@ -109,7 +131,8 @@ function showAllGames() {
     deleteChildElements(gamesContainer);
 
     // add all games from the JSON data to the DOM
-
+    addGamesToPage(GAMES_JSON);
+    console.log("All Games: ", GAMES_JSON.length);
 }
 
 // select each button in the "Our Games" section
@@ -118,7 +141,9 @@ const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
-
+unfundedBtn.addEventListener("click", filterUnfundedOnly);
+fundedBtn.addEventListener("click", filterFundedOnly);
+allBtn.addEventListener("click", showAllGames);
 
 /*************************************************************************************
  * Challenge 6: Add more information at the top of the page about the company.
