@@ -73,3 +73,17 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
+.main-wrapper {
+  border: 3px dashed #dbdbdb;
+  border-radius: 15px;
+  background: #768297;
+  padding: 1.5em;
+  margin: 2em auto;
+  max-width: 1200px;
+}
+
+body {
+  background: #f8f9fa;
+  margin: 0;
+}
