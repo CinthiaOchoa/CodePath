@@ -4,7 +4,7 @@ Submitted by: Cinthia Mariana Ochoa Torre
 
 Sea Monster Crowdfunding is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: 5-8 hours spent in total
+Time spent: 7-8 hours spent in total
 
 Required Features
 The following required functionality is completed:
