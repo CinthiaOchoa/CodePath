@@ -3,7 +3,7 @@ Submitted by: Cinthia Mariana Ochoa Torre
 
 Sea Monster Crowdfunding is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: 10 hours spent in total
+Time spent: 5-8 hours spent in total
 
 Required Features
 The following required functionality is completed:
@@ -12,23 +12,13 @@ The following required functionality is completed:
 [x] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
 [x] The Our Games section initially displays all games funded by Sea Monster Crowdfunding.
 [x] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
-The following optional features are implemented:
 
-[ ] List anything else that you got done to improve the app functionality!
-Video Walkthrough
-Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/hyyBsEq' title='Video Walkthrough' alt='Video Walkthrough' />
 
-<!-- Replace the GIF link above with your actual walkthrough GIF link! -->
-GIF created with ...
-<!-- Recommended tools:
-Kap for macOS
-ScreenToGif for Windows
-peek for Linux. -->
 
 Notes
-Describe any challenges encountered while building the app.
+I really struglue when my CSS changes weren’t showing up until I double-checked that my style.css file was properly linked in the HTML <head>, figuring out when and how to use addEventListener for the filter buttons took extra time. I also mixed up single and double quotes in template literals but fixed it after checking the examples, and setting up all the files and code to run correctly from a local server was confusing at first.
 
 License
 Copyright [2025] cmot
