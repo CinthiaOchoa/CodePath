@@ -14,7 +14,8 @@ The following required functionality is completed:
 [x] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 
-<img src='https://i.imgur.com/example.jpg' title='Video Walkthrough' alt='Video Walkthrough' />
+<a href="https://imgur.com/a/hyyBsEq" title="Video Walkthrough">Video Walkthrough</a>
+
 
 
 
