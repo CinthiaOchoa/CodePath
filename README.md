@@ -19,7 +19,7 @@ The following required functionality is completed:
 
 
 
-Notes
+Notes:
 I really struglue when my CSS changes weren’t showing up until I double-checked that my style.css file was properly linked in the HTML <head>, figuring out when and how to use addEventListener for the filter buttons took extra time. I also mixed up single and double quotes in template literals but fixed it after checking the examples, and setting up all the files and code to run correctly from a local server was confusing at first.
 
 License
